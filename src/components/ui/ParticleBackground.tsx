@@ -89,4 +89,4 @@ import type { ISourceOptions } from '@tsparticles/engine';
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-background)]" />
     </div>
   );
-}
+}*/
