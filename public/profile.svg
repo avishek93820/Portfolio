@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="80" y1="80" x2="320" y2="320">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="160" r="72" fill="url(#accent)" opacity="0.25"/>
+  <circle cx="200" cy="150" r="56" stroke="url(#accent)" stroke-width="3" fill="#1e293b"/>
+  <text x="200" y="165" text-anchor="middle" font-family="system-ui,sans-serif" font-size="48" font-weight="700" fill="url(#accent)">AC</text>
+  <ellipse cx="200" cy="310" rx="100" ry="70" fill="#1e293b" stroke="url(#accent)" stroke-width="2" opacity="0.9"/>
+</svg>
