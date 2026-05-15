@@ -3,14 +3,13 @@ import { ArrowDown, Download, Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { PERSONAL, ROTATING_ROLES } from '@/utils/constants';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
-import { useParallax } from '@/hooks/useParallax';
 import { Button } from '@/components/ui/Button';
 import { ParticleBackground } from '@/components/ui/ParticleBackground';
 import { scrollToSection } from '@/utils/scroll';
 
 export function Hero() {
   const typedRole = useTypingEffect(ROTATING_ROLES);
-  const parallaxY = useParallax(0.15);
+  const parallaxY = 0;
   const [imgError, setImgError] = useState(false);
 
   return (
@@ -18,7 +17,7 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden section-padding pt-28"
     >
-      <ParticleBackground />
+      
 
       <div className="absolute inset-0 neural-grid opacity-60 pointer-events-none" />
       <div
@@ -64,7 +63,7 @@ export function Hero() {
             <motion.div
               className="absolute -bottom-2 -right-2 px-3 py-1.5 rounded-full glass text-xs font-mono text-cyan-400 border border-cyan-500/30"
               animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 2 }}
             >
               Open to opportunities
             </motion.div>
@@ -98,7 +97,7 @@ export function Hero() {
               <motion.span
                 className="inline-block w-0.5 h-6 sm:h-7 bg-cyan-400 ml-1 align-middle"
                 animate={{ opacity: [1, 0] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
+                transition={{ duration: 0.8 }}
               />
             </span>
           </div>
@@ -140,7 +139,7 @@ export function Hero() {
         }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[var(--color-muted)] hover:text-cyan-400 transition-colors z-10"
         animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ duration: 2 }}
         aria-label="Scroll to about"
       >
         <ArrowDown className="w-6 h-6" />
