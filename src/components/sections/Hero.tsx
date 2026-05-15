@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PERSONAL, ROTATING_ROLES } from '@/utils/constants';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import { Button } from '@/components/ui/Button';
-import { ParticleBackground } from '@/components/ui/ParticleBackground';
+
 import { scrollToSection } from '@/utils/scroll';
 
 export function Hero() {
