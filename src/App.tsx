@@ -6,7 +6,7 @@ import { ErrorBoundary } from '@/components/layout/ErrorBoundary';
 import { LoadingScreen } from '@/components/layout/LoadingScreen';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CustomCursor } from '@/components/layout/CustomCursor';
+
 import { ScrollProgress } from '@/components/layout/ScrollProgress';
 import { BackToTop } from '@/components/layout/BackToTop';
 import { PageTransition } from '@/components/layout/PageTransition';
