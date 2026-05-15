@@ -49,8 +49,8 @@ export function Hero() {
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const img = e.currentTarget;
-                      if (!img.src.endsWith('/profile.svg')) {
-                        img.src = '/profile.svg';
+                      if (!img.src.endsWith('/file.svg')) {
+                        img.src = '/file.svg';
                       } else {
                         setImgError(true);
                       }
