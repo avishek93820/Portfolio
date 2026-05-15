@@ -1,15 +1,26 @@
 import { useEffect, useState } from 'react';
 
-export function useParallax(speed = 0.3): number {
+export function useParallax(speed = 0.1): number {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setOffset(window.scrollY * speed);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setOffset(window.scrollY * speed);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [speed]);
 
   return offset;
