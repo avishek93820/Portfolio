@@ -44,7 +44,9 @@ export function ParticleBackground() {
           onClick: {
             enable: false,
           },
-          resize: false,
+          resize: {
+            enable: false,
+          },
         },
       },
 
