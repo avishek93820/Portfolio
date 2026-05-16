@@ -1,4 +1,3 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
@@ -17,11 +16,7 @@ const rootEl = document.getElementById('root');
 
 if (!rootEl) {
   document.body.innerHTML =
-    '<p style="font-family:sans-serif;padding:2rem;color:#f87171">Root element #root not found. Run with <code>npm run dev</code>, do not open index.html directly.</p>';
+    '<p style="font-family:sans-serif;padding:2rem;color:#f87171">Root element #root not found. Run with npm run dev.</p>';
 } else {
-  createRoot(rootEl).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+  createRoot(rootEl).render(<App />);
 }
