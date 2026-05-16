@@ -136,13 +136,13 @@ Email, LinkedIn, GitHub, and direct communication options.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/avishek93820/Portfolio.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd your-repo-name
+cd Portfolio
 ```
 
 Install dependencies:
