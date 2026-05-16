@@ -1,136 +1,219 @@
+# 🚀 Avishek Chatterjee – AI/ML Portfolio Website
 
-# Avishek Chatterjee - AI/ML Portfolio Website
+A modern, responsive personal portfolio website showcasing my projects, technical skills, academic journey, certifications, and AI/ML engineering work.
 
-A premium, futuristic, fully responsive personal portfolio website built to showcase my projects, skills, and journey as an aspiring AI/ML Engineer and Software Developer.
+Designed to present my professional profile to recruiters, collaborators, and developers.
 
-## Live Demo
-[Add Deployment Link Here]
+## 🌐 Live Demo
+
+🔗 https://your-vercel-url.vercel.app
 
 ---
 
-## Overview
+## 📌 About
 
-This portfolio website is designed with a modern AI-inspired aesthetic to create a strong first impression for recruiters, hiring managers, and collaborators.
+This portfolio represents my journey as an aspiring **AI/ML Engineer** and **Software Developer**, highlighting my technical expertise, projects, and achievements.
 
-It highlights:
+The website includes:
 
-- Professional profile
-- Technical skills
+- Professional introduction
+- Skills and technical stack
 - Featured projects
 - Education timeline
 - Certifications
-- GitHub developer stats
+- GitHub developer profile
+- Contact information
+
+---
+
+## ✨ Features
+
+- Responsive modern UI
+- Dark / Light theme toggle
+- Smooth navigation between sections
+- Interactive project showcase
+- GitHub developer dashboard
+- Contribution heatmap
+- Skills showcase
+- Education timeline
+- Certifications display
 - Contact form integration
+- Mobile-friendly design
 
 ---
 
-## Features
-
-### Modern UI/UX
-- Futuristic premium design
-- Glassmorphism effects
-- Smooth animations
-- AI-inspired particle background
-- Gradient glow visuals
-- Dark/light theme toggle
-- Custom cursor
-- Responsive design
-
-### Interactive Components
-- Animated hero section
-- Typing text effect
-- Scroll progress indicator
-- Section reveal animations
-- Project hover effects
-- Modal project details
-- Back to top button
-- Smooth scrolling navigation
-
-### Developer Integrations
-- GitHub API integration
-- GitHub stats dashboard
-- Top languages display
-- Repository showcase
-- Contribution analytics
-
-### Functional Features
-- Contact form with EmailJS
-- Resume download
-- SEO optimization
-- Theme persistence
-- Responsive mobile navigation
-
----
-
-## Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
-- React.js
+- React
 - Vite
+- TypeScript
 - Tailwind CSS
+
+### UI / Libraries
 - Framer Motion
-- React Router DOM
 - Lucide React
 
-### Animations & UI
-- tsParticles
-- React Type Animation
-
-### APIs & Integrations
-- GitHub API
-- EmailJS
+### Integrations
+- GitHub profile data
+- Email contact support
 
 ### Deployment
-- Vercel / Netlify
+- Vercel
+- GitHub
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```bash
-portfolio/
-│
-├── public/
-│   ├── favicon.ico
-│   ├── resume.pdf
-│   └── profile.jpg
-│
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── icons/
-│   │
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Education.jsx
-│   │   ├── Certifications.jsx
-│   │   ├── GitHubStats.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │   ├── ThemeToggle.jsx
-│   │   └── Loader.jsx
-│   │
-│   ├── hooks/
-│   │   ├── useTheme.js
-│   │   └── useScrollProgress.js
-│   │
-│   ├── utils/
-│   │   ├── constants.js
-│   │   └── githubApi.js
-│   │
-│   ├── contexts/
-│   │   └── ThemeContext.jsx
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── .env.example
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
+src/
+ ┣ components/
+ ┃ ┣ layout/
+ ┃ ┣ sections/
+ ┃ ┗ ui/
+ ┣ contexts/
+ ┣ hooks/
+ ┣ pages/
+ ┣ utils/
+ ┣ App.tsx
+ ┣ main.tsx
+ ┗ index.css
+```
+
+---
+
+## 🖥 Website Sections
+
+### Hero
+Professional introduction with role highlights and quick access to projects and contact information.
+
+### About
+Overview of my background, interests, and professional goals.
+
+### Skills
+Technical stack including:
+
+- Java
+- Python
+- C
+- React
+- Tailwind CSS
+- Machine Learning
+- Deep Learning
+- PyTorch
+- Scikit-learn
+- DSA
+- DBMS
+- Operating Systems
+
+### Projects
+Featured projects including:
+
+- AI-Driven Photonic Device Design Optimization
+- AgroAI – AI Powered Smart Agriculture Platform
+
+### Education
+Academic journey and achievements.
+
+### Certifications
+Professional certifications in:
+
+- Object Oriented Programming
+- Artificial Intelligence
+- Machine Learning
+
+### GitHub Dashboard
+Repository highlights, programming language usage, and contribution activity.
+
+### Contact
+Email, LinkedIn, GitHub, and direct communication options.
+
+---
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+Move into the project directory:
+
+```bash
+cd your-repo-name
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔨 Build for Production
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed using **Vercel**.
+
+Deployment workflow:
+
+1. Push changes to GitHub
+2. Vercel automatically detects updates
+3. Build and deployment are triggered
+4. Live website gets updated
+
+---
+
+## 📸 Screenshots
+
+Add screenshots here if needed.
+
+Example:
+
+```md
+![Home Page](./screenshots/home.png)
+![Projects Section](./screenshots/projects.png)
+```
+
+---
+
+## 👨‍💻 About Me
+
+**Avishek Chatterjee**  
+Aspiring AI/ML Engineer | Software Developer
+
+📍 Kolkata, West Bengal, India
+
+### Connect with Me
+
+GitHub: https://github.com/avishek93820  
+LinkedIn: https://linkedin.com/in/avishek-chatterjee6504  
+Email: avishek93820@gmail.com
+
+---
+
+## 📄 License
+
+This project is open for learning, inspiration, and personal reference.
