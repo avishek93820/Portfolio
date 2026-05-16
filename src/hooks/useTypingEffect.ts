@@ -2,46 +2,46 @@ import { useEffect, useState } from 'react';
 
 export function useTypingEffect(
   words: readonly string[],
-  typingSpeed = 80,
-  deletingSpeed = 40,
-  pauseDuration = 2000,
+  typingSpeed = 120,
+  deletingSpeed = 70,
+  pauseDuration = 1500,
 ): string {
   const [displayText, setDisplayText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    const currentWord = words[wordIndex] ?? '';
+    if (!words.length) return;
 
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          const next = currentWord.slice(0, charIndex + 1);
-          setDisplayText(next);
-          setCharIndex((i) => i + 1);
+    const currentWord = words[wordIndex];
+    let timeout: ReturnType<typeof setTimeout>;
 
-          if (next === currentWord) {
-            setTimeout(() => setIsDeleting(true), pauseDuration);
-          }
-        } else {
-          const next = currentWord.slice(0, charIndex - 1);
-          setDisplayText(next);
-          setCharIndex((i) => i - 1);
+    if (!isDeleting) {
+      if (displayText.length < currentWord.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length + 1));
+        }, typingSpeed);
+      } else {
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, pauseDuration);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length - 1));
+        }, deletingSpeed);
+      } else {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }
+    }
 
-          if (next === '') {
-            setIsDeleting(false);
-            setWordIndex((i) => (i + 1) % words.length);
-            setCharIndex(0);
-          }
-        }
-      },
-      isDeleting ? deletingSpeed : typingSpeed,
-    );
-
-    return () => clearTimeout(timeout);
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
   }, [
-    charIndex,
+    displayText,
     isDeleting,
     wordIndex,
     words,
