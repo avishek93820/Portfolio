@@ -1,5 +1,6 @@
-import { motion, type Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
+import { useMemo } from 'react';
 
 interface RevealProps {
   children: ReactNode;
@@ -9,10 +10,10 @@ interface RevealProps {
 }
 
 const directionOffset = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: 40, y: 0 },
-  right: { x: -40, y: 0 },
+  up: { y: 24, x: 0 },
+  down: { y: -24, x: 0 },
+  left: { x: 24, y: 0 },
+  right: { x: -24, y: 0 },
 };
 
 export function Reveal({
@@ -23,23 +24,31 @@ export function Reveal({
 }: RevealProps) {
   const offset = directionOffset[direction];
 
-  const variants: Variants = {
-    hidden: { opacity: 0, ...offset },
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
+  const initial = useMemo(
+    () => ({
+      opacity: 0,
+      ...offset,
+    }),
+    [offset],
+  );
 
   return (
     <motion.div
       className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
-      variants={variants}
+      initial={initial}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
+      transition={{
+        duration: 0.45,
+        delay,
+      }}
     >
       {children}
     </motion.div>
