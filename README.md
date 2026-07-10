@@ -6,7 +6,7 @@ Designed to present my professional profile to recruiters, collaborators, and de
 
 ## 🌐 Live Demo
 
-🔗 https://portfolio-ac-23-27.vercel.app/
+🔗 https://avishek93820-portfolio.vercel.app/
 
 ---
 
